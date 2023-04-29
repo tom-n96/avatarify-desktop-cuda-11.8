@@ -1,5 +1,5 @@
-TORCHDIR = c:/SDKs/libtorch-win-shared-with-deps-1.6.0
-TORCHDIR_DEBUG = c:/SDKs/libtorch-win-shared-with-deps-debug-1.6.0
+TORCHDIR = c:/SDKs/libtorch
+TORCHDIR_DEBUG = c:/SDKs/libtorch
 
 #Application version
 VERSION_MAJOR = 0
@@ -108,8 +108,6 @@ LIBS += \
     asmjit.lib \
     c10.lib \
     c10_cuda.lib \
-    caffe2_detectron_ops_gpu.lib \
-    caffe2_module_test_dynamic.lib \
     caffe2_nvrtc.lib \
     clog.lib \
     cpuinfo.lib \

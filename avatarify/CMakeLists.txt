@@ -25,24 +25,16 @@ set(QT_NO_WARNING_OUTPUT)
 add_subdirectory(lib/akvirtualcamera)
 
 # libraries paths
-if (WIN32)
-    set(QTDIR "C:\\Qt\\5.15.0\\msvc2019_64")
-    if (CMAKE_BUILD_TYPE STREQUAL "Debug")
-        set(TORCHDIR "C:\\SDKs\\libtorch-win-shared-with-deps-debug-1.6.0\\libtorch")
-    else ()
-        set(TORCHDIR "C:\\SDKs\\libtorch-win-shared-with-deps-1.6.0\\libtorch")
-    endif ()
-elseif (APPLE)
-    set(QTDIR "/usr/local/Cellar/qt/5.15.0")
-    set(TORCHDIR "./lib/libtorch")
-elseif (UNIX)
-    set(QTDIR "/usr/local/Cellar/qt/5.15.0")
-    set(TORCHDIR "./lib/libtorch")
+
+set(QTDIR "C:\\Qt\\5.15.0\\msvc2019_64")
+set(TORCHDIR "C:\\SDKs\\libtorch")
 endif ()
 set(ENV{QTDIR} ${QTDIR})
 set(QT_CMAKE "${QTDIR}/lib/cmake")
 set(TORCH_CMAKE "${TORCHDIR}/share/cmake/Torch")
+set(TORCH_INCLUDE_DIRS "C:\\SDKs\\libtorch")
 set(CMAKE_PREFIX_PATH "${QT_CMAKE};${TORCH_CMAKE}")
+
 
 
 # Qt
